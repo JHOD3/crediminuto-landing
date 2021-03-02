@@ -18,6 +18,7 @@ function initAutocomplete() {
     map.addListener("bounds_changed", () => {
         searchBox.setBounds(map.getBounds());
     });
+    
     let markers = [];
     // Listen for the event fired when the user selects a prediction and retrieve
     // more details for that place.
