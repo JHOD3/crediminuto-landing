@@ -1565,6 +1565,7 @@ button.bg-light:hover {
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
+    overflow-x: hidden;
 }
 h1,
 h2,
