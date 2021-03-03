@@ -11,9 +11,9 @@ function initAutocomplete() {
         mapTypeId: "roadmap",
     });
     // Create the search box and link it to the UI element.
-    //const input = document.getElementById("pac-input");
+    const input = document.getElementById("pac-input");
     const searchBox = new google.maps.places.SearchBox(input);
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+    //map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
     // Bias the SearchBox results towards current map's viewport.
     map.addListener("bounds_changed", () => {
         searchBox.setBounds(map.getBounds());
@@ -41,7 +41,7 @@ function initAutocomplete() {
                 return;
             }
             const icon = {
-                url: place.icon,
+                url: '../img/favicon.ico',
                 size: new google.maps.Size(71, 71),
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(17, 34),
@@ -54,9 +54,12 @@ function initAutocomplete() {
                     icon,
                     title: place.name,
                     position: place.geometry.location,
+                    direction: place.formatted_address,
+                    horario:place.opening_hours.weekday_text,
+                    contacto: place.international_phone_number,
                 })
             );
-
+            console.log(place);
             if (place.geometry.viewport) {
                 // Only geocodes have viewport.
                 bounds.union(place.geometry.viewport);
@@ -64,6 +67,15 @@ function initAutocomplete() {
                 bounds.extend(place.geometry.location);
             }
         });
+        $('#horario-tienda').html(' ');
+        markers[0].horario.forEach((horas) => {
+            $('#horario-tienda').append(horas+'<br>');
+        })
+        $('#nombre-tienda').html(markers[0].title);
+        $('#direccion-tienda').html(markers[0].direction);
+        $('.contactar-tienda').attr('href','tel:'+markers[0].contacto)
+        
         map.fitBounds(bounds);
     });
+
 }

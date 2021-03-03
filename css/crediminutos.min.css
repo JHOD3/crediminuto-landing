@@ -15365,13 +15365,21 @@ a.text-dark:hover {
 .card-header {
     background-color: rgba(255, 245, 245, 0.03);
 }
-.accordion > .card:not(:first-of-type) .card-header:first-child {
-    border-radius: 0;
-    border-bottom: 2px solid #ebebeb;
+/*.accordion > .card:not(:first-of-type) .card-header:first-child {*/
+/*    border-radius: 0;*/
+/*    border-bottom: 2px solid #ebebeb;*/
+/*}*/
+/*.accordion > .card .card-header {*/
+/*    margin-bottom: -1px;*/
+/*    border-bottom: 2px solid #eeeeee;*/
+/*}*/
+
+.card-header {
+     border-bottom: none; 
 }
-.accordion > .card .card-header {
-    margin-bottom: -1px;
-    border-bottom: 2px solid #eeeeee;
+.accordion>.card {
+    border-radius: 0;
+    border-bottom: 2px solid #ebebeb !important;
 }
 .md-accordion .card .card-header a:not(.collapsed) .rotate-icon {
     transform: rotate(135deg);
@@ -15473,6 +15481,52 @@ a.text-dark:hover {
     background-size: cover;
     padding: 0 0 7rem 0;
 }
+.requisito-img {
+    transition: all .4s ease-in-out;
+}
+.requisito-img:hover {
+    transform: scale(1.1);
+}
+.link-footer {
+    font-size: 13px;
+}
+.link-footer:hover{
+    text-decoration: underline;
+}
+.logo-footer {
+    width: 16rem;
+}
+.accordion a[aria-expanded="true"] .title-acordion {
+    font-weight: bold;
+}
+.text-requisito{
+    font-size: 18px;
+}
+.font25-px-icon{
+    font-size: 28px;
+}
+.map-left{
+    height: 35rem;
+    overflow-y: auto;
+}
+.form-control-lg {
+    height: calc(1.5em + 1rem + 2px);
+    padding: 1.6rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.pac-container{
+    border-radius: 20px;
+}
+.arrow-input-map{
+    right: 34px;
+    top: 15px;
+    font-size: 22px;
+    color: #ef0f30;
+}
+#pac-input{
+    padding-right: 3rem;
+}
 @media (max-width: 1140px) {
     
 }
@@ -15480,6 +15534,12 @@ a.text-dark:hover {
     
 }
 @media (max-width: 768px) {
+    #pac-input{
+        padding-right: 2.5rem;
+    }
+    .text-requisito{
+        font-size: 20px;
+    }
     #map{
         height: 16rem;
     }
