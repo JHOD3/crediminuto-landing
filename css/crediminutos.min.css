@@ -15528,8 +15528,8 @@ a.text-dark:hover {
     padding-right: 3rem;
 }
 .caja-content-datos{
-    height: auto;
-    max-height: 30rem;
+    height: 35rem;
+    max-height: 35rem;
     overflow-y: auto;
 }
 @media (max-width: 1140px) {
@@ -15540,7 +15540,7 @@ a.text-dark:hover {
 }
 @media (max-width: 768px) {
     .caja-content-datos {
-        height: auto;
+        height: 12rem;
         max-height: 12rem;
         overflow-y: auto;
     }
