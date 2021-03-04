@@ -15527,6 +15527,11 @@ a.text-dark:hover {
 #pac-input{
     padding-right: 3rem;
 }
+.caja-content-datos{
+    height: auto;
+    max-height: 30rem;
+    overflow-y: auto;
+}
 @media (max-width: 1140px) {
     
 }
@@ -15534,6 +15539,11 @@ a.text-dark:hover {
     
 }
 @media (max-width: 768px) {
+    .caja-content-datos {
+        height: auto;
+        max-height: 12rem;
+        overflow-y: auto;
+    }
     #pac-input{
         padding-right: 2.5rem;
     }
