@@ -15532,6 +15532,18 @@ a.text-dark:hover {
     max-height: 35rem;
     overflow-y: auto;
 }
+.font10-px {
+    font-size: 10px;
+}
+.ul-footer li{
+    margin-top: 5px;
+    list-style: none;
+}
+.circle-red-key{
+    border: 1px solid red;
+    border-radius: 50px;
+    padding: 5px;
+}
 @media (max-width: 1140px) {
     
 }
